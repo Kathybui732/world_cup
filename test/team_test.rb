@@ -18,4 +18,12 @@ class TeamTest < Minitest::Test
   def test_it_has_a_country
     assert_equal "France", @team.country
   end
+
+  def test_eliminated?
+    assert_equal false, @team.eliminated?
+  end
+
+  def test_if_be_eliminated
+    assert_equal true, @team.eliminated
+  end
 end
