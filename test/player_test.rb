@@ -11,4 +11,8 @@ class WorldCup < Minitest::Test
   def test_it_has_a_name
     assert_equal "Luka Modric", @player.name
   end
+
+  def test_it_has_a_position
+    assert_equal "midfielder", @player.position
+  end
 end
