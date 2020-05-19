@@ -23,7 +23,8 @@ class TeamTest < Minitest::Test
     assert_equal false, @team.eliminated?
   end
 
-  def test_if_be_eliminated
-    assert_equal true, @team.eliminated
+  def test_eliminated_changes_eliminated?
+    @team.eliminated
+    assert_equal true, @team.eliminated?
   end
 end
