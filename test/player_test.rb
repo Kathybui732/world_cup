@@ -9,7 +9,7 @@ class WorldCup < Minitest::Test
   end
 
   def test_it_exists
-    assert_instance_of Player, @team
+    assert_instance_of Player, @player
   end
 
   def test_it_has_a_name
