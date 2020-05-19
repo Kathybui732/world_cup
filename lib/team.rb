@@ -1,9 +1,10 @@
 class Team
-  attr_reader :country
+  attr_reader :country, :players
 
   def initialize(country)
     @country = country
     @elim = false
+    @players = []
   end
 
   def eliminated?

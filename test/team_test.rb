@@ -27,4 +27,8 @@ class TeamTest < Minitest::Test
     @team.eliminated
     assert_equal true, @team.eliminated?
   end
+
+  def test_it_has_empty_player_array
+    assert_equal [], @team.players
+  end
 end
