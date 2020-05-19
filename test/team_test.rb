@@ -37,4 +37,10 @@ class TeamTest < Minitest::Test
     @team.add_player(@pogba)
     assert_equal [@mbappe, @pogba], @team.players
   end
+
+  def test_it_can_sort_players_by_position
+    @team.add_player(@mbappe)
+    @team.add_player(@pogba)
+    assert_equal [@pogba], @team.players_by_position("midfielder")
+  end
 end
