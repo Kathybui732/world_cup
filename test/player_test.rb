@@ -8,6 +8,10 @@ class WorldCup < Minitest::Test
     @player = Player.new({name: "Luka Modric", position: "midfielder"})
   end
 
+  def test_it_exists
+    assert_instance_of Player, @team
+  end
+
   def test_it_has_a_name
     assert_equal "Luka Modric", @player.name
   end
