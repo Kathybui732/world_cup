@@ -25,34 +25,19 @@ class WorldCupTest < Minitest::Test
   end
 
   def test_it_has_a_year
-    @france.add_player(@mbappe)
-    @france.add_player(@pogba)
-    @croatia.add_player(@modric)
-    @croatia.add_player(@vida)
     assert_equal 2018, @world_cup.year
   end
 
   def test_it_has_teams
-    @france.add_player(@mbappe)
-    @france.add_player(@pogba)
-    @croatia.add_player(@modric)
-    @croatia.add_player(@vida)
     assert_equal [@france, @croatia], @world_cup.teams
   end
 
   def test_active_players_by_position
-    @france.add_player(@mbappe)
-    @france.add_player(@pogba)
-    @croatia.add_player(@modric)
-    @croatia.add_player(@vida)
     assert_equal [@pogba, @modric], @world_cup.active_players_by_position("midfielder")
   end
 
   def test_eliminated_players_not_in_active_players_by_position
-    @france.add_player(@mbappe)
-    @france.add_player(@pogba)
-    @croatia.add_player(@modric)
-    @croatia.add_player(@vida)
-    @croatia.eliminated = true
+    @croatia.eliminated
     assert_equal [@pogba], @world_cup.active_players_by_position("midfielder")
+  end
 end
